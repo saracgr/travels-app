@@ -324,8 +324,8 @@ body{
   }
 
   .card > img{
-    max-height: 90px;
-    max-width: 70px;
+    max-height: 70px;
+    max-width: 50px;
   }
 
   .details-card{
