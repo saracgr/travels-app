@@ -22,7 +22,7 @@ return (
                         <span className='text-xs uppercase text-orange-600 ml-2 mt-0 py-0'> {place.country}</span>
                     </p>
                 </div>
-                 <Link className="p-5" to={`${place.id}`}>
+                 <Link className='p-2 flex items-center justify-center' to={`${place.id}`}>
                     <FaArrowAltCircleRight className=' arrow text-orange-600'/>
                  </Link>
              </div>

@@ -26,6 +26,7 @@ body{
   min-height: 100vh;
   font-family: 'Poppins', 'sans-serif';
   background-image: linear-gradient(to right, #171717 0%, #171717 100%);
+  overflow-x: hidden;
 }
 
  button:hover{
