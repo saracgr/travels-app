@@ -1,0 +1,355 @@
+@import "tailwindcss";
+
+:root{
+  --xs-text: 12px;
+  --s-text: 14px;
+  --m-text: 16px;
+  --l-text: 20px;
+  --xl-text: 26px;
+  --xxl-text: 32px;
+  --xxxl-text: 48px;
+  --xxxxl-text: 72px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Poppins', 'sans-serif';
+  background-image: linear-gradient(to right, #171717 0%, #171717 100%);
+}
+
+ button:hover{
+  transform: translate(0px,-15px);
+}
+
+.content-container{
+  display: flex;
+  align-items: start;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hero-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 150px;
+  padding: 20px;
+}
+
+.orangeShadow:hover{
+  box-shadow: rgb(255, 131, 82) 0px 2px 6px 0px;
+}
+
+.hero > p:first-of-type{
+  font-size: var(--xl-text) ;
+}
+
+.hero > p:last-of-type{
+  font-size: var(--m-text) ;
+}
+
+.hero > h1{
+  font-size: var(--xxxxl-text) ;
+}
+
+.hero > button{
+  font-size: var(--m-text);
+}
+
+.detail-btn {
+  font-size: var(--xs-text);
+  color: white;
+  border-radius: 10px;
+}
+
+.packages-container{
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  align-content: start;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 30px;
+  gap: 30px;
+}
+
+.packages{
+  grid-column: span 8;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.packages-container > h1{
+  grid-column: span 4;
+}
+
+.card{
+  margin-right: 15px;
+  align-items: center;
+  min-width: 0;
+  width:100%;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card-details > img{
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  max-height: 120px;
+  min-width: 100px;
+  max-width: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  padding: 20px;
+}
+
+.details-card{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.details{
+  padding-left: 10px;
+  gap: 10px;
+}
+
+.details-card  > img{
+  max-height: 250px;
+  align-self: start;
+  border-radius: 10px;
+}
+
+.arrow{
+  font-size: 40px;
+}
+
+ @media screen and (max-width: 1440px){
+  .hero h1 {
+    font-size: var(--xxxl-text);
+  }
+
+  .hero p:first-of-type{
+    font-size: var(--l-text) ;
+  }
+  .hero p:last-of-type{
+    font-size: var(--m-text) ;
+  }
+
+  button{
+    font-size: var(--m-text);
+  }
+
+  .packages{
+    grid-template-columns: 1fr;
+    grid-column: span 7;
+  }
+
+  .packages-container{
+    justify-items: center;
+    gap: 5px;
+    padding: 15px;
+  }
+  .packages-container > h1{
+    grid-column: span 5;
+    align-self:center;
+    text-align: center;
+  }
+
+  .card{
+    margin-right: 15px;
+    min-width: 0;
+    width:100%;
+    max-width: 400px;
+    padding: 15px;
+  }
+}
+
+@media screen and (width: 2560px){
+  .hero h1 {
+    font-size: var(--xxxxl-text) ;
+  }
+
+  .hero p{
+    font-size: var(--xxl-text) ;
+  }
+
+  .packages-container{
+    align-items: center;
+    padding: 40px;
+    gap: 70px;
+  }
+  
+  .packages{
+    grid-column: span 8;
+    gap: 25px;
+  }
+  
+  .packages-container > h1{
+    grid-column: span 4;
+    font-size: 90px;
+  }
+  
+  .card{
+    padding: 35px;
+    border-radius: 20px;
+  }
+
+  .card > * {
+    font-size: xx-large;
+  }
+  
+  .card > img{
+    min-height: 200px;
+    max-height: 320px;
+    min-width: 200px;
+    max-width: 250px;
+    border-radius: 20px;
+  }
+
+  header > * {
+    font-size: 32px;
+  }
+
+  .logo{
+    min-width: 110px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .hero h1 {
+    font-size: var(--xxl-text);
+  }
+
+  .hero p:first-of-type{
+    font-size: var(--xs-text) ;
+  }
+
+  .hero p:last-of-type{
+    font-size: var(--s-text) ;
+  }
+  
+  .packages-container{
+    margin-top: 50px;
+    padding: 15px;
+    align-content: center;
+    gap: 25px;
+  }
+
+  .packages{
+    grid-template-columns: 1fr;
+    grid-column: span 12;
+    padding: 14px;
+  }
+
+  .packages-container > h1{
+    grid-column: span 12;
+    text-align: center;
+  }
+
+  .card{
+    max-width: 490px;
+  }
+}
+
+@media screen and (max-width: 456px){
+  .logo{
+    width: 45px;
+  }
+
+  .hero h1 {
+    font-size: var(--xxxl-text);
+  }
+
+  .hero p:first-of-type{
+    font-size: var(--m-text) ;
+  }
+  .hero p:last-of-type{
+    font-size: var(--s-text);
+  }
+
+  .hero button{
+    font-size: var(--m-text);
+
+  }
+
+  .hero{
+    text-align: center;
+    padding: 10px;
+  }
+
+  .packages-container {
+    padding: 20px;
+    margin-top: 50px;
+    gap: 10px;
+  }
+  
+  .card {
+    gap: none;
+  }
+  
+  .card > p {
+    font-size: var(--xs-text);
+  }
+
+  .packages-container > h1{
+   font-size: var(--xxl-text);
+  }
+
+  .card > img{
+    max-height: 90px;
+    max-width: 70px;
+  }
+
+  .details-card{
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .details-container{
+    align-items: center;
+    margin-top: 70px;
+  }
+
+  .details{
+    text-align: center;
+    align-items: center;
+  }
+
+  .details-container img {
+   align-self: center;
+   max-height: 320px;
+  }
+  
+  .arrow{
+    font-size: 45x;
+  }
+}
