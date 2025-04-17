@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import plane from '../../public/images/planito.png'
+import plane from './images/planito.png'
 export default function Header() {
   return (
     <header className='flex flex-row justify-between items-center px-4 py-4'>
