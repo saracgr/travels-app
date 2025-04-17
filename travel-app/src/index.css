@@ -18,7 +18,6 @@
 html, body{
   margin: 0;
   padding: 0;
-  background-color: red;
 }
 
 body{
@@ -321,7 +320,7 @@ body{
   }
 
   .packages-container > h1{
-   font-size: var(--xxl-text);
+   font-size: var(--m-text);
   }
 
   .card-details > img{
