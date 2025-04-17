@@ -26,7 +26,6 @@ body{
   min-height: 100vh;
   font-family: 'Poppins', 'sans-serif';
   background-image: linear-gradient(to right, #171717 0%, #171717 100%);
-  overflow-x: hidden;
 }
 
  button:hover{
@@ -40,6 +39,7 @@ body{
   justify-content: center;
   width: 100%;
   min-height: 100vh;
+
 }
 
 .hero-container{
@@ -315,17 +315,21 @@ body{
     gap: none;
   }
   
-  .card > p {
-    font-size: 10px;
+  .card-details > p,
+  .card-details > span {
+    font-size: var(--xs-text);
   }
 
   .packages-container > h1{
    font-size: var(--xxl-text);
   }
 
-  .card > img{
-    max-height: 70px;
-    max-width: 50px;
+  .card-details > img{
+    max-width: 2px;
+    max-height: 2px;
+    min-height: none;
+    min-width: none;
+
   }
 
   .details-card{
