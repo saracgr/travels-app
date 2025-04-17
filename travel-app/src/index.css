@@ -315,7 +315,7 @@ body{
   }
   
   .card > p {
-    font-size: var(--xs-text);
+    font-size: 10px;
   }
 
   .packages-container > h1{
@@ -350,6 +350,6 @@ body{
   }
   
   .arrow{
-    font-size: 45x;
+    font-size: 35px;
   }
 }

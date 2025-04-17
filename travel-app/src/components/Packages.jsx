@@ -9,7 +9,7 @@ export default function Packages() {
     const { packages } = useContext(PackageContext)
      
 return (
-    <section className='packages-container'>
+    <section className='packages-container '>
         <h1 className='font-semibold text-3xl md:text-4xl lg:text-5xl'>GRAB THE LATEST PROMOTIONS !</h1>
         <div className='packages'>
         { packages.length > 0 &&
@@ -23,7 +23,7 @@ return (
                     </p>
                 </div>
                  <Link className="p-5" to={`${place.id}`}>
-                 <FaArrowAltCircleRight className=' arrow text-orange-600'/>
+                    <FaArrowAltCircleRight className=' arrow text-orange-600'/>
                  </Link>
              </div>
           ))
