@@ -27,7 +27,6 @@ return (
                 <div className='card-details flex items-center'> 
                    <img className={`packageImg transition-opacity duration-500 ${loadedImages ? 'opacity-100' : 'opacity-0'}`} 
                    alt={`${place.city}, ${place.country}`}
-                   loading="lazy"
                    onLoad={handleImageLoad}
                    src={place.src}/>
                     <p className='text-white text-m px-3'>
