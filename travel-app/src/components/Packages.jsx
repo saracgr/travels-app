@@ -1,5 +1,5 @@
 import { React, useEffect } from 'react'
-import { useState, createContext, useContext } from 'react'
+import { useState, useRef, createContext, useContext } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { PackageContext } from '../App' 
 import { FaArrowAltCircleRight } from "react-icons/fa";
@@ -7,7 +7,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 export default function Packages() {
   const { packages } = useContext(PackageContext);
 
-   const loadTimeOut = useRef(null);
+       const loadTimeOut = useRef(null);
       
         const handleImageLoad = () => { 
           clearTimeout(loadTimeOut.current)  
