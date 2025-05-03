@@ -4,7 +4,6 @@ import { Link, Outlet } from 'react-router-dom'
 import { PackageContext } from '../App' 
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
-
 export default function Packages() {
   const { packages } = useContext(PackageContext);
   const [loadedImages, setLoadedImages] = useState({});
@@ -12,7 +11,6 @@ export default function Packages() {
   const handleImageLoad = (id) => {
     setLoadedImages(prev => ({ ...prev, [id]: true }));
   };
-
      
 return (
     <section className='packages-container '>

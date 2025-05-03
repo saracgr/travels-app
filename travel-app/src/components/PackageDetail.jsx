@@ -5,7 +5,7 @@ import { PackageContext } from '../App'
 import { FaArrowAltCircleLeft } from 'react-icons/fa'
 
 export default function PackageDetail(){
-    const { id } = useParams()
+    const { id } = useParams();
     const { packages } = useContext(PackageContext);
     const [packagePlace, setPackagePlace] = useState(null);
     const [weather, setWeather] = useState(null);
@@ -20,11 +20,10 @@ export default function PackageDetail(){
         },100)
       };
     
-
     useEffect(() => {
       const foundPackage = packages.find(place => place.id.toString() === id);
       setPackagePlace(foundPackage); 
-      handleImageLoad()
+      setLoadedImages(false)
     }, [id, packages]);
 
     useEffect(() => {
