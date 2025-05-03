@@ -6,6 +6,8 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 
 export default function Packages() {
   const { packages } = useContext(PackageContext);
+  const [loadedImages, setLoadedImages] = useState(false);
+  
   const loadTimeOut = useRef(null);
       
     const handleImageLoad = () => { 
