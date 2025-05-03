@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react'
+import { useState, createContext, useEffect } from 'react'
 import Hero from './components/Hero'
 import Layout from './components/Layout'
 import Packages from './components/Packages'
@@ -10,7 +10,15 @@ export const PackageContext = createContext()
 
 
 function App() {
-  const [packages, setPackages] = useState(places)
+  const [packages, setPackages] = useState([]);
+
+  useEffect(() => {
+    setPackages(places);
+    places.forEach(place => {
+      const img = new Image();
+      img.src = place.src;
+    });
+  }, []);
 
   return (
     <PackageContext.Provider value={{ packages, setPackages }}>
