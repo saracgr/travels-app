@@ -105,6 +105,7 @@ body{
   align-items: center;
   min-width: min-content;
   width:100%;
+  max-width: 450px;
   padding: 15px;
   border-radius: 10px;
 }
@@ -123,7 +124,7 @@ body{
 .details-container{
   display: flex;
   flex-direction: column;
-  margin-top: 150px;
+  margin-top: 10vw;
   padding: 20px;
 }
 
