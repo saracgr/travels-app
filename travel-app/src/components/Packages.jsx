@@ -20,7 +20,7 @@ return (
           packages.map(place => (
             <div key={place.city} className='card flex justify-between items-start bg-neutral-950 rounded-md gap-2 py-5 px-5'>                    
                 <div className='card-details flex items-center'> 
-                   <img className={`packageImg transition-opacity duration-300 ${
+                   <img className={`packageImg transition-opacity duration-100 ${
                      loadedImages[place.id] ? 'opacity-100' : 'opacity-0'
                    }`}
                    alt={`${place.city}, ${place.country}`}
