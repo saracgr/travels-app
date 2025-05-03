@@ -1,21 +1,21 @@
 import { React } from 'react'
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext, useEffect, useRef } from 'react'
 import { Link, useParams} from 'react-router-dom'
 import { PackageContext } from '../App' 
 import { FaArrowAltCircleLeft } from 'react-icons/fa'
 
 export default function PackageDetail(){
     const { id } = useParams()
-    const { packages } = useContext(PackageContext)
+    const { packages } = useContext(PackageContext);
     const [packagePlace, setPackagePlace] = useState(null);
-    const [weather, setWeather] = useState(null)
+    const [weather, setWeather] = useState(null);
     const [loadedImages, setLoadedImages] = useState(false);
+
+    const loadTimeOut = useRef(null);
     
       const handleImageLoad = () => { 
-        setLoadedImages(false)
-        let loadTimeOut
-        clearTimeout(loadTimeOut)  
-        loadTimeOut = setTimeout(() => {
+        clearTimeout(loadTimeOut.current)  
+        loadTimeOut.current = setTimeout(() => {
         setLoadedImages(true)
         },100)
       };
@@ -47,7 +47,7 @@ export default function PackageDetail(){
                     <img className={`detailImg transition-opacity duration-500 
                         ${loadedImages ? 'opacity-100' : 'opacity-0'}`} 
                         src={packagePlace.src} 
-                        onLoad={() => handleImageLoad(packagePlace.city)}
+                        onLoad={handleImageLoad}
                         alt={packagePlace.city}
                         />
                     <div className='details'> 
