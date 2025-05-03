@@ -80,7 +80,7 @@ body{
 .packages-container{
   height: 100%;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 10vh;
   display: grid;
   align-items: center;
   align-content: start;
@@ -124,7 +124,7 @@ body{
 .details-container{
   display: flex;
   flex-direction: column;
-  margin-top: 10vw;
+  margin-top: 10vh;
   padding: 20px;
 }
 
