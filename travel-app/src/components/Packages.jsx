@@ -6,15 +6,14 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 
 export default function Packages() {
   const { packages } = useContext(PackageContext);
-
-       const loadTimeOut = useRef(null);
+  const loadTimeOut = useRef(null);
       
-        const handleImageLoad = () => { 
-          clearTimeout(loadTimeOut.current)  
-          loadTimeOut.current = setTimeout(() => {
-          setLoadedImages(true)
-          },100)
-        };
+    const handleImageLoad = () => { 
+        clearTimeout(loadTimeOut.current)  
+        loadTimeOut.current = setTimeout(() => {
+        setLoadedImages(true)
+        },100)
+    };
      
 return (
     <section className='packages-container '>
